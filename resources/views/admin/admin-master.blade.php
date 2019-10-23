@@ -28,7 +28,7 @@
 
         <!-- Right navbar links -->
         <ul class="navbar-nav ml-auto">
-            <!-- Messages Dropdown Menu -->
+            <!-- Notifications Dropdown Menu -->
             <li class="nav-item dropdown">
                 <a class="nav-link" data-toggle="dropdown" href="#">
                     <span><i class="fa fa-bell" style="font-size: 20px;"></i>&nbsp;&nbsp;<sup class="badge badge-danger navbar-badge">3</sup></span>
@@ -86,6 +86,30 @@
                 </div>
             </li>
             <!-- Notifications Dropdown Menu -->
+
+            {{--Logout--}}
+            <li class="nav-item dropdown">
+                <a class="nav-link" data-toggle="dropdown" href="#">
+                    <span><i class="fa fa-sign-out" style="font-size: 20px;"></i></span>
+                </a>
+                <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+                    <a href="{{ route('login') }}" class="dropdown-item">
+                        <span>Profile</span>
+                    </a>
+                    @if (Route::has('register'))
+                        <a href="{{ route('register') }}" class="dropdown-item">
+                            <span>Settings</span>
+                        </a>
+                    @endif
+                    <a href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();" class="dropdown-item">
+                        <span>Logout</span>
+                    </a>
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                        @csrf
+                    </form>
+                </div>
+            </li>
+            {{--Logout--}}
         </ul>
     </nav>
     <!-- /.navbar -->
@@ -298,7 +322,7 @@
             Anything you want
         </div>
         <!-- Default to the left -->
-        <strong>Copyright &copy; 2014-2018 <a href="https://adminlte.io">AdminLTE.io</a>.</strong> All rights reserved.
+        <strong>Copyright &copy; 2019-2020 <a href="https://google.com">Digital IT Soluation Ltd.</a></strong> All rights reserved.
     </footer>
 </div>
 <!-- ./wrapper -->
