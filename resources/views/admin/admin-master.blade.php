@@ -288,7 +288,7 @@
                             <!-- /.card-header -->
                             <div class="card-body">
                                 <div class="row">
-                                    <strong class="text-center">card-body</strong>
+                                    <admin-main></admin-main>
                                 </div>
                                 <!-- /.row -->
                             </div>
@@ -316,6 +316,7 @@
     <!-- /.control-sidebar -->
     <!-- <example-component></example-component> -->
     <!-- Main Footer -->
+    
     <footer class="main-footer">
         <!-- To the right -->
         <div class="float-right d-sm-none d-md-block">
